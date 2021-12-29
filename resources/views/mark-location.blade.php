@@ -50,7 +50,7 @@
                                 icon: "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
 
                                 //animasi lompat lompat
-                                animation: google.maps.Animation.BOUNCE
+                                animation: google.maps.Animation.DROP
                             });
                             map.setCenter(pos);
 
@@ -70,6 +70,16 @@
                                 // tampilkan info window di atas marker
                                 infowindow.open(map, marker);
                             });
+
+                            // event saat marker diklik
+                            marker.addListener("click", function() {
+                                if (marker.getAnimation() !== null) {
+                                    marker.setAnimation(null);
+                                } else {
+                                    marker.setAnimation(google.maps.Animation.BOUNCE);
+                                }
+                            });
+
                         },
                         () => {
                             handleLocationError(true, infoWindow, map.getCenter());

@@ -24,4 +24,9 @@ class UserController extends Controller
     {
         return view('mark-location');
     }
+
+    public function set_mark()
+    {
+        return view('set-mark');
+    }
 }
