@@ -19,3 +19,4 @@ Route::get('get-ip-address', [UserController::class, 'get_ip_address']);
 Route::get('get-latitude', [UserController::class, 'get_latitude']);
 Route::get('mark-location', [UserController::class, 'mark_location']);
 Route::get('set-mark', [UserController::class, 'set_mark']);
+Route::get('polylines', [UserController::class, 'polylines']);

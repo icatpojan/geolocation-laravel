@@ -29,4 +29,9 @@ class UserController extends Controller
     {
         return view('set-mark');
     }
+
+    public function polylines()
+    {
+        return view('polylines');
+    }
 }
