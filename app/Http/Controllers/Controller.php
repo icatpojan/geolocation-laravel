@@ -24,4 +24,9 @@ class Controller extends BaseController
             }
         }
     }
+
+    function rad($x)
+    {
+        return $x * M_PI / 180;
+    }
 }
